@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/chat_layout_bg">
+
+        <ImageView
+            android:id="@+id/iv_attach"
+            android:layout_width="@dimen/dp_25"
+            android:layout_height="@dimen/dp_25"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="@dimen/dp_10"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_marginStart="@dimen/dp_10"
+            android:layout_marginTop="@dimen/dp_10"
+            android:src="@drawable/ic_add" />
+
+        <EditText
+            android:id="@+id/et_text_message"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dp_10"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_marginRight="@dimen/dp_10"
+            android:layout_marginTop="@dimen/dp_10"
+            android:layout_toEndOf="@+id/iv_attach"
+            android:layout_toLeftOf="@+id/ll_options"
+            android:layout_toRightOf="@+id/iv_attach"
+            android:layout_toStartOf="@+id/ll_options"
+            android:background="@drawable/edit_text_border"
+            android:hint=""
+            android:maxLines="8"
+            android:padding="@dimen/dp_10"
+            android:scrollbars="vertical"
+            android:textColorHint="@color/gray_1" />
+
+        <LinearLayout
+            android:id="@+id/ll_options"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true">
+
+            <LinearLayout
+                android:id="@+id/ll_text_missing"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/iv_camera"
+                    android:layout_width="@dimen/dp_40"
+                    android:layout_height="@dimen/dp_40"
+                    android:layout_centerVertical="true"
+                    android:layout_marginBottom="@dimen/dp_10"
+                    android:layout_marginEnd="@dimen/dp_10"
+                    android:layout_marginRight="@dimen/dp_10"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:layout_toLeftOf="@+id/iv_send"
+                    android:layout_toStartOf="@+id/iv_send"
+                    android:src="@drawable/ic_camera" />
+
+                <ImageView
+                    android:id="@+id/ic_seperator"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dp_40"
+                    android:layout_centerVertical="true"
+                    android:layout_marginBottom="@dimen/dp_10"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:layout_toLeftOf="@+id/iv_camera"
+                    android:layout_toStartOf="@+id/iv_camera"
+                    android:padding="5dp"
+                    android:src="@drawable/ic_dots" />
+
+                <ImageView
+                    android:id="@+id/iv_audio"
+                    android:layout_width="@dimen/dp_40"
+                    android:layout_height="@dimen/dp_40"
+                    android:layout_marginBottom="@dimen/dp_10"
+                    android:layout_marginEnd="@dimen/dp_10"
+                    android:layout_marginRight="@dimen/dp_10"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:layout_toLeftOf="@+id/ic_seperator"
+                    android:layout_toStartOf="@+id/ic_seperator"
+                    android:src="@drawable/ic_mic" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/iv_send"
+                android:layout_width="@dimen/dp_40"
+                android:layout_height="@dimen/dp_40"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginBottom="@dimen/dp_10"
+                android:layout_marginEnd="@dimen/dp_16"
+                android:layout_marginRight="@dimen/dp_16"
+                android:layout_marginTop="@dimen/dp_10"
+                android:src="@drawable/ic_send"
+                android:visibility="gone" />
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

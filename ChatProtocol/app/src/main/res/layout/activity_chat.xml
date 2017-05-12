@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_chat_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        android:divider="@android:color/transparent"
+        android:paddingBottom="96dp"
+        android:paddingTop="8dp"
+        android:layout_above="@+id/tv_dots"
+        android:stackFromBottom="true"
+        android:transcriptMode="alwaysScroll" />
+
+    <include
+        android:id="@+id/tv_dots"
+        layout="@layout/chat_item_dots"
+        android:layout_above="@+id/chat_layout"
+        android:visibility="gone"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content" />
+
+    <include
+        android:id="@+id/chat_layout"
+        layout="@layout/lz_chat_messaging_qwerty"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" />
+</RelativeLayout>
